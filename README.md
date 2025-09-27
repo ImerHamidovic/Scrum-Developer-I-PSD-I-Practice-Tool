@@ -25,9 +25,10 @@ There are many ways to support us; in exchange, you'll get this material in a pr
 
 It's great to learn these questions as your exam preparation, and, yes, you should pass just based on that. However, we highly recommend more interactive learning if you want to become an expert. Currently, we're recommending those courses:
 
+- 🎬 [Coursera: video-based, official course by IBM](https://imp.i384100.net/9LYq23).
 - 📖 [Educative: text-based, video-free course, including set up out-of-the-box for you Cloud Labs to practice hands-on without the need to set up an environment (and payments). The link includes the highest available discount Educative offers](https://www.educative.io/courses/development-a-guide-to-modern-software-delivery?aff=VALz).
 
-Yes, we have a little commission from that link. Therefore, by using that link, you're supporting us.
+Yes, we have a little commission from these links. Therefore, by using these links, you're supporting us.
 
 ## ✨ This course is unlike any Scrum Developer I for PSD I course you will find online.
 
@@ -128,6 +129,10 @@ Yes, we have a little commission from that link. Therefore, by using that link, 
 **[v1.6.0](../../releases/tag/v1.6.0): January 24, 2025.**
 
 - Update outdated terminology, delete 1 duplicated question, and add 1 new question.
+
+**[v1.6.1](../../releases/tag/v1.6.1): September 27, 2025.**
+
+- Fix literally 1 question with a wrong answer.
 
 ## 🙋‍♀️ & 🙋‍♂️ Contribution
 
