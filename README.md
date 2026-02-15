@@ -2,6 +2,8 @@
 
 > Interactive web-based practice tool for Professional Scrum Developer I (PSD-I) from Scrum.org exam preparation
 
+![PSD-I Practice Tool Preview](images/preview.png)
+
 ## ✨ Features
 
 - 📝 **Practice Mode** - Study questions with instant feedback and explanations
@@ -11,8 +13,6 @@
 - 🎯 **300+ Questions** - Comprehensive coverage of all PSD-I exam topics
 - ⌨️ **Keyboard Navigation** - Efficient browsing with shortcuts
 - 🎲 **Randomized Options** - Prevents answer memorization
-
-![PSD-I Practice Tool Preview](images/preview.png)
 
 ## �🚀 Quick Start
 
