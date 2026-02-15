@@ -45,15 +45,23 @@ const examContainer = document.getElementById('exam-question-container');
 
 // Fetch Questions
 fetch('/api/questions')
-    .then(res => res.json())
+    .then(res => {
+        if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+    })
     .then(data => {
+        if (!data || !Array.isArray(data) || data.length === 0) {
+            throw new Error('Invalid or empty questions data');
+        }
         allQuestions = data;
         loadingDiv.classList.add('hidden');
         mainMenu.classList.remove('hidden');
     })
     .catch(err => {
-        loadingDiv.innerText = 'Error loading questions. Please check the console.';
-        console.error(err);
+        loadingDiv.innerText = `Error loading questions: ${err.message}. Please try refreshing or check your connection.`;
+        console.error('Failed to load questions:', err);
     });
 
 // Event Listeners
