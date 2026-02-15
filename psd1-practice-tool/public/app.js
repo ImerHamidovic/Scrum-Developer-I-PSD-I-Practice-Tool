@@ -60,7 +60,15 @@ fetch('/api/questions')
         mainMenu.classList.remove('hidden');
     })
     .catch(err => {
-        loadingDiv.innerText = `Error loading questions: ${err.message}. Please try refreshing or check your connection.`;
+        loadingDiv.innerHTML = `
+            <div style="color: #d32f2f; text-align: center;">
+                <p style="font-size: 18px; margin-bottom: 10px;">⚠️ Error Loading Questions</p>
+                <p style="color: #858585; font-size: 14px;">${err.message}</p>
+                <button onclick="location.reload()" style="margin-top: 20px; background-color: #0e639c; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">
+                    Retry
+                </button>
+            </div>
+        `;
         console.error('Failed to load questions:', err);
     });
 

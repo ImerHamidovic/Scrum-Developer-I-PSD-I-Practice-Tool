@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: psd1-practice-tool
+    runtime: node
+    rootDir: psd1-practice-tool
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /
+    plan: free

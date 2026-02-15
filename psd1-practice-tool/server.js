@@ -1,4 +1,5 @@
 const express = require('express');
+const compression = require('compression');
 const path = require('path');
 const fs = require('fs');
 const { parseQuestions } = require('./parser');
@@ -7,11 +8,19 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const CACHE_FILE = path.join(__dirname, 'questions.json');
 
-// Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+// Enable gzip compression for all responses
+app.use(compression());
+
+// Serve static files with caching headers
+app.use(express.static(path.join(__dirname, 'public'), {
+    maxAge: '1h',
+    etag: true
+}));
 
 // Serve images from the parent directory's images folder
-app.use('/images', express.static(path.join(__dirname, '..', 'images')));
+app.use('/images', express.static(path.join(__dirname, '..', 'images'), {
+    maxAge: '1d'
+}));
 
 // API Endpoint to get questions
 app.get('/api/questions', (req, res) => {
@@ -22,6 +31,8 @@ app.get('/api/questions', (req, res) => {
         try {
             const data = fs.readFileSync(CACHE_FILE, 'utf8');
             const questions = JSON.parse(data);
+            // Set cache headers for API response
+            res.set('Cache-Control', 'public, max-age=3600');
             return res.json(questions);
         } catch (err) {
             console.error('Error reading cache file, falling back to parsing:', err);
