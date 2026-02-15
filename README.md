@@ -9,7 +9,7 @@
 - 🔖 **Bookmarks** - Save difficult questions for later review
 - 📊 **Progress Tracking** - View detailed results and performance analytics
 - 🎯 **300+ Questions** - Comprehensive coverage of all PSD-I exam topics
-- ⌨️ **Keyboard Navigation** - Efficient browsing with arrow keys and shortcuts
+- ⌨️ **Keyboard Navigation** - Efficient browsing with shortcuts
 - 🎲 **Randomized Options** - Prevents answer memorization
 
 ## 🚀 Quick Start

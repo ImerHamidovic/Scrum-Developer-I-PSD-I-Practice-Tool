@@ -71,11 +71,9 @@ Review your saved questions:
 
 ### ⌨️ Keyboard Shortcuts
 
-- **Enter/Space**: Check answer (Practice Mode) or navigate
-- **→ or N**: Next question
-- **← or P**: Previous question
-- **B**: Toggle bookmark
-- **Number keys (1-9)**: Select/deselect answer options
+- **Enter/Space**: Check answer (Practice Mode) or navigate to next question
+- **Backspace/Delete**: Previous question
+- **Alt**: Check answer (Practice Mode only)
 
 ## Architecture
 
