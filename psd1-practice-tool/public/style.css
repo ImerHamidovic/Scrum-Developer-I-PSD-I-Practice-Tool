@@ -32,6 +32,13 @@ h1 {
     margin-bottom: 30px;
 }
 
+.mode-descriptions {
+    text-align: center;
+    color: #858585;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
 button {
     background-color: #0e639c;
     color: white;
@@ -295,6 +302,10 @@ button.secondary:hover {
         flex-direction: column;
         gap: 12px;
         margin-bottom: 20px;
+    }
+
+    .mode-descriptions {
+        text-align: left;
     }
 
     /* Main menu buttons - full width and spaced */
