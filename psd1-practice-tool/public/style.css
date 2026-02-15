@@ -148,6 +148,55 @@ button.secondary:hover {
     margin-top: 20px;
 }
 
+/* Desktop: keep controls always visible by fixing them to the bottom
+   and make the question area scrollable inside the container. No shadow. */
+@media (min-width: 769px) {
+    /* Constrain overall container height so inner areas can scroll */
+    .container {
+        max-height: calc(100vh - 40px);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 60px; /* leave space so fixed controls don't overlap container */
+    }
+
+    /* Ensure practice/exam areas use column layout so question area can flex */
+    #practice-area,
+    #exam-area {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 0; /* allow children to shrink and enable scrolling */
+    }
+
+    /* Make question containers scrollable and leave space for fixed controls */
+    #practice-question-container,
+    #exam-question-container {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        padding-bottom: 90px; /* space for the fixed controls */
+        scroll-padding-bottom: 90px; /* ensure focused items are fully visible */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Fix controls to bottom, centered to match container width. No shadow. */
+    #practice-area .controls,
+    #exam-area .controls {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(800px, 90%);
+        padding: 12px 10px;
+        margin: 0;
+        z-index: 1000;
+        background-color: #1e1e1e;
+        border-top: 1px solid #3c3c3c;
+        display: flex;
+        gap: 8px;
+        justify-content: space-between;
+    }
+}
 .score-display {
     font-size: 18px;
     font-weight: bold;
